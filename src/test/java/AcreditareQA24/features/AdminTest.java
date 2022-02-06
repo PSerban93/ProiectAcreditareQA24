@@ -41,7 +41,7 @@ public class AdminTest extends BaseTest{
         adminSteps.setNewContent();
         adminSteps.createNewCoupon();
         adminSteps.checkCreateCouponPage();
-        adminSteps.enterCouponCode("CPNTEST75");
+        adminSteps.enterCouponCode("CPNTEST95");
         adminSteps.setDescriptionCode("This is a Test Coupon!");
         adminSteps.selectDiscountType();
         adminSteps.selectFixedCartDiscountType();
@@ -63,7 +63,7 @@ public class AdminTest extends BaseTest{
         productSteps.clickAddtoCart();
         productSteps.verifyAddedToCart("Hoodie with Logo”, “T-Shirt” and “Beanie");
         productSteps.clickViewCartButton();
-        cartSteps.setCouponCode("CPNTEST75");
+        cartSteps.setCouponCode("CPNTEST95");
         cartSteps.applyCoupon();
         cartSteps.checkCouponSuccessMessage();
     }
@@ -88,12 +88,12 @@ public class AdminTest extends BaseTest{
         adminSteps.setNewContent();
         adminSteps.createNewProduct();
         adminSteps.checkCreateProductPage();
-        adminSteps.enterProductName("ProductTest3");
+        adminSteps.enterProductName("ProductTest4");
         adminSteps.setDescriptionText();
-        adminSteps.setProductDescription("This is a product description test!");
+        adminSteps.setProductDescription("This is a product description test !");
         adminSteps.setRegularPrice("25");
         adminSteps.setShortDescriptionText();
-        adminSteps.setProductShortDescription("Best Product!");
+        adminSteps.setProductShortDescription("Best Product !");
         adminSteps.selectInventoryTab();
         adminSteps.enterSKU("test-sku");
         adminSteps.manageStock();
@@ -110,12 +110,12 @@ public class AdminTest extends BaseTest{
         loginSteps.doLogin(EnvConstants.USER_NAME,EnvConstants.USER_PASS);
         loginSteps.checkLoginMsg(EnvConstants.USER_NAME);
         cartSteps.emptyCart();
-        searchSteps.searchForProduct("ProductTest3");
-        searchSteps.verifySearchResult("ProductTest3");
-        searchSteps.verifyProductisDisplayed("ProductTest3");
-        searchSteps.findAndOpenProduct("ProductTest3");
+        searchSteps.searchForProduct("ProductTest4");
+        searchSteps.verifySearchResult("ProductTest4");
+        searchSteps.verifyProductisDisplayed("ProductTest4");
+        searchSteps.findAndOpenProduct("ProductTest4");
         productSteps.clickAddtoCart();
-        productSteps.verifyAddedToCart("ProductTest3");
+        productSteps.verifyAddedToCart("ProductTest4");
         productSteps.clickViewCartButton();
     }
 

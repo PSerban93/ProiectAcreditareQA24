@@ -10,9 +10,9 @@ public class BlogTest extends BaseTest{
     public void addTestComment(){
         loginSteps.doLogin(EnvConstants.USER_NAME,EnvConstants.USER_PASS);
         blogSteps.clickOnBlogButton();
-        blogSteps.setComment("This is a Simple Test Comment!!!");
+        blogSteps.setComment("This is a Simple Test Comment !!!");
         blogSteps.postComment();
-        blogSteps.verifyCommentIsPosted("This is a Simple Test Comment!!!");
+        blogSteps.verifyCommentIsPosted("This is a Simple Test Comment !!!");
     }
 
     @Test
@@ -41,11 +41,11 @@ public class BlogTest extends BaseTest{
         searchSteps.verifyProductisDisplayed("Beanie with Logo");
         searchSteps.findAndOpenProduct("Beanie with Logo");
         productSteps.clickReviewsbutton();
-        productSteps.addCommentonProduct("Best Product! Thank you very much. The Product is just what I am looking for this frosty weather!");
+        productSteps.addCommentonProduct("Best Product!! Thank you very much. The Product is just what I am looking for this frosty weather !!");
         productSteps.starRating5();
         productSteps.clickSubmitComment();
         productSteps.checkApproval();
-        productSteps.checkComment("Best Product! Thank you very much. The Product is just what I am looking for this frosty weather!");
+        productSteps.checkComment("Best Product!! Thank you very much. The Product is just what I am looking for this frosty weather !!");
     }
 
     @Test
@@ -56,10 +56,10 @@ public class BlogTest extends BaseTest{
         searchSteps.verifyProductisDisplayed("Album");
         searchSteps.findAndOpenProduct("Album");
         productSteps.clickReviewsbutton();
-        productSteps.addCommentonProduct("When is Coming back on Stock??");
+        productSteps.addCommentonProduct("When is Coming back on Stock ??");
         productSteps.starRating3();
         productSteps.clickSubmitComment();
         productSteps.checkApproval();
-        productSteps.checkComment("When is Coming back on Stock??");
+        productSteps.checkComment("When is Coming back on Stock ??");
     }
 }
